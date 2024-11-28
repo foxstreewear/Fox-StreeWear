@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loja de Roupas - Luxo Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .produto {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .produto:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .imagem-produto {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 100%; /* Mantém a proporção quadrada */
+            overflow: hidden;
+        }
+
+        .imagem-produto img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .imagem-produto img.hover {
+            opacity: 0;
+        }
+
+        .imagem-produto:hover img.hover {
+            opacity: 1;
+        }
+
+        .descricao {
+            padding: 15px;
+        }
+
+        .descricao h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .preco {
+            color: #e67e22;
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .comprar {
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .comprar:hover {
+            background-color: #2ecc71;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color:#333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fox Stree Wear</h1>
+    </header>
+
+    <main>
+        <h2>LANÇAMENTOS</h2>
+        <div class="catalogo">
+            <!-- Produto 1 -->
+            <div class="produto">
+                <div class="imagem-produto">
+                    <img src="img/camisa 1.jpeg" alt="Camiseta Estilosa" class="normal">
+                    <img src="img/camisa 2.jpeg" alt="Camiseta Estilosa - Versão 2" class="hover">
+                </div>
+                <div class="descricao">
+                    <h3>Shiny Foxy</h3>
+                    <p>Confortável e moderna para todas as ocasiões.</p>
+                    <span class="preco">R$ 74,99</span>
+                    <button class="comprar">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="produto">
+                <div class="imagem-produto">
+                    <img src="img/camisa 3.jpeg" alt="Jaqueta de Couro" class="normal">
+                    <img src="img/camisa 4.jpeg" alt="Jaqueta de Couro - Versão 2" class="hover">
+                </div>
+                <div class="descricao">
+                    <h3>Night</h3>
+                    <p>Perfeita para os dias frios com estilo.</p>
+                    <span class="preco">R$ 74,99</span>
+                    <button class="comprar">Comprar</button>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="produto">
+                <div class="imagem-produto">
+                    <img src="img/camisa 5.jpeg" alt="Calça Jeans" class="normal">
+                    <img src="img/camisa 6.jpeg" alt="Calça Jeans - Versão 2" class="hover">
+                </div>
+                <div class="descricao">
+                    <h3>
+                        ChronoFox</h3>
+                    <p>Design clássico com toque moderno.</p>
+                    <span class="preco">R$ 74,99</span>
+                    <button class="comprar">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fox Stree Wear. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
